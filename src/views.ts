@@ -21,6 +21,11 @@ const canvasSetUp = (): void => {
         HTMLElement;
     preview.setAttribute("height", `${PREVIEW_HEIGHT}`);
     preview.setAttribute("width", `${PREVIEW_WIDTH}`);
+
+    const tulipContainer = document.querySelector("#svgTulipContainer") as SVGGraphicsElement &
+        HTMLElement;
+    tulipContainer.setAttribute("height", `${170}`);
+    tulipContainer.setAttribute("width", `${PREVIEW_WIDTH}`);
 }
 
 /**
@@ -199,6 +204,19 @@ const levelUp = (s: State): void => {
 }
 
 /**
+ * Update the view of the tulip
+ * @param s the current state
+ */
+const renderTulips = (s:State):void => {
+    const tulipContainer = document.querySelector("#svgTulipContainer") as SVGGraphicsElement &
+        HTMLElement;
+    tulipContainer.setAttribute("viewBox", `0 -70 170 ${s.tulips}`);
+    const loveYouText = document.querySelector("#loveYou") as SVGGraphicsElement &
+        HTMLElement;
+    s.tulips <= 50 ? show(loveYouText) : hide(loveYouText);
+}
+
+/**
  * Clear full rows
  * @param s the current state
  */
@@ -249,6 +267,7 @@ const render = (s: State): void => {
     spawnShape(s);
     controlShape(s);
     score(s);
+    renderTulips(s);
     levelUp(s);
     gameOver(s);
 };

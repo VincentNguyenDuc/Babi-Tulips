@@ -1,57 +1,70 @@
 <html>
-  <head>
-    <title>FIT2102 A1 2023</title>
-  </head>
-  <body>
-    <h1>Tetris</h1>
-    <main id="main" class="flex row">
-      <svg id="svgCanvas">
-        <!-- game over text box -->
-        <g id="gameOver" visibility="hidden">
-          <rect x="26" y="120" fill="white" height="68" width="149"></rect>
-          <text x="36" y="150">Game Over</text>
-          <text x="32" y="180">Restarting...</text>
-        </g>
-        <!-- level up text box -->
-        <g id="levelUp" visibility="hidden">
-          <rect x="26" y="120" fill="white" height="48" width="149"></rect>
-          <text x="38" y="150">Next Level</text>
-        </g>
-      </svg>
-      <div id="sideBar" class="flex col">
-        <svg id="svgPreview"></svg>
-        <div id="info" class="flex col">
-          <div class="text">
-            <span class="left">Level: </span>
-            <span class="right" id="levelText">...</span>
-          </div>
-          <div class="text">
-            <span class="left">Score: </span>
-            <span class="right" id="scoreText">...</span>
-          </div>
-          <div class="text">
-            <span class="left">Highscore: </span>
-            <span class="right" id="highScoreText">...</span>
-          </div>
-          <div class="text">
-            <span class="left">Left: </span>
-            <span class="right">A</span>
-          </div>
-          <div class="text">
-            <span class="left">Down: </span>
-            <span class="right">S</span>
-          </div>
-          <div class="text">
-            <span class="left">Right: </span>
-            <span class="right">D</span>
-          </div>
-          <div class="text">
-            <span class="left">Rotate: </span>
-            <span class="right">Space</span>
-          </div>
+
+<head>
+  <title>Iuiu</title>
+</head>
+
+<body>
+  <h1>Telips</h1>
+  <main id="main" class="flex row">
+    <svg id="svgCanvas">
+      <!-- game over text box -->
+      <g id="gameOver" visibility="hidden">
+        <rect x="26" y="120" fill="white" height="68" width="149"></rect>
+        <text x="36" y="150">Game Over</text>
+        <text x="32" y="180">Restarting...</text>
+      </g>
+      <!-- level up text box -->
+      <g id="levelUp" visibility="hidden">
+        <rect x="26" y="120" fill="white" height="48" width="149"></rect>
+        <text x="38" y="150">Next Level</text>
+      </g>
+    </svg>
+
+    <!-- Side Bar -->
+    <div id="sideBar" class="flex col">
+      <svg id="svgPreview"></svg>
+      <div id="info" class="flex col">
+        <div class="text">
+          <span class="left">Level: </span>
+          <span class="right" id="levelText">...</span>
+        </div>
+        <div class="text">
+          <span class="left">Score: </span>
+          <span class="right" id="scoreText">...</span>
+        </div>
+        <div class="text">
+          <span class="left">Highscore: </span>
+          <span class="right" id="highScoreText">...</span>
         </div>
       </div>
-    </main>
-    <script type="module" src="./src/main.ts"></script>
-  </body>
+      <svg id="svgTulipContainer">
+        <text visibility="hidden" id="loveYou">Happy Anniversary!</text>
+        <path id="stemStart" fill="#28951d"
+          d="M45.905 174.555l14.92-1.148c-1.356 54.043-.444 106.95 10.328 154.93C93.398 442.01 99.46 539.5 113.615 645.083l-5.738-1.148L47.053 297.35z" />
+        <path id="stemEnd" fill="#28951d"
+          d="M98.862 172.857l14.92-1.147c7.874 58.29 8.204 105.265 10.328 154.93 5.488 116.108-4.59 208.868-6.886 313.302l-8.033 2.295c-1.15-113.223-8.473-207.923-3.44-339.698z" />
+        <g id="flower">
+          <path id="path4018" fill="#b7071d"
+            d="M42.326 19.406c4.51-8.195 8.587-10.802 18.166-7.53 12.905-15.72 21.302 3.837 28.207 7.17L68.2 42.518z" />
+          <path id="path3984" fill="#da0000"
+            d="M76.827 45.748L41.764 6.365C34.19.765 27.284-8.968 14.37 18.36c-34.142 64.17-3.59 185.13 51.116 154.345z" />
+          <path id="path3986" fill="#da2e1d"
+            d="M80.386 18.24C94.958-2.29 95.406 3.576 109.28 8.62c56.04 84.064-21.58 203.21-54.687 159.39C47.28 133.745 40.655 60.422 80.386 18.24z" />
+        </g>
+        <path id="path4022" fill="#086d1d"
+          d="M32.43 254.345c29.894 76.677 73.925 269.66 74.65 398.528l-5.737-2.815c-17.307-75.78-35.34-151.56-58.256-227.34-16.35-44.45-16.58-114.143-10.657-168.373z" />
+        <path id="leafLeftStart" fill="#085f1d"
+          d="M129.244 236.304c52.764 121.68 37.775 324.254-19.783 422.136l-6.47-20.52c9.253-75.78 21.467-130.165 16.995-202.994-7.495-39.288 3.343-144.392 9.264-198.622z" />
+
+        <path id="leafLeftEnd" fill="#085f1d"
+          d="M141.616 236.484c45.544 124.563 31.232 319.65-31.96 413.992l-6.307-15.648c13.672-75.108 17.58-127.64 17.38-200.606-5.18-39.66 11.793-143.948 20.882-197.738z" />
+
+        <path id="movingPath" fill="none" stroke="#000" d="M48.182 173.445c21.354.635 36.97 9.303 64.062 1.904" />
+      </svg>
+    </div>
+  </main>
+  <script type="module" src="./src/main.ts"></script>
+</body>
+
 </html>

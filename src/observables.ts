@@ -1,6 +1,6 @@
 import { fromEvent, interval, merge, zip } from "rxjs";
 import { map, filter, scan } from "rxjs/operators";
-import { Key, Constants, Block } from "./types";
+import { Key, Constants, Block, Seed } from "./types";
 import { MoveAction, GameCycleAction, RotateAction, TickAction } from "./states"
 import { RNG } from "./utils";
 
@@ -32,7 +32,7 @@ const rng$ = (seed: number) =>
 /**
  * An observable that emit the Game Cycle Action every 30 * TICK_RATE_MS 
  */
-const gameCycle$ = zip(rng$(16012004), rng$(19082004)).pipe(
+const gameCycle$ = zip(rng$(Seed.RNG_SEED_1), rng$(Seed.RNG_SEED_2)).pipe(
     map(pair => new GameCycleAction(pair))
 )
 
