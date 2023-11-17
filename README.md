@@ -1,4 +1,4 @@
-# Assignment 1 - FRP Tetris
+# FRP Telips
 
 ## Usage
 

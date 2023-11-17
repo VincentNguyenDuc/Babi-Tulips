@@ -1,7 +1,11 @@
 :root {
-  background-color: #ccc;
+  background-color: var(--bg-color);
   padding: 2em;
   padding-top: 4em;
+  --tulips-color: #efc3e6;
+  --bg-color: #f0e6ef;
+  --stroke-color: #9c89b8;
+  --text-color: #5e548e;
 }
 
 BODY,
@@ -23,14 +27,14 @@ body {
 }
 
 H1 {
+  color: var(--text-color);
   font-size: 3em;
   font-family: arial, helvetica, sans-serif;
   font-weight: bolder;
   background-color: #fff;
   border-radius: 0.05em;
   padding: 0.1em 0.1em 0.1em 0.1em;
-  box-shadow: 0em 0em 0.15em #1799DD;
-  text-shadow: 0em 0em 1px #ccc;
+  box-shadow: 0em 0em 0.15em var(--tulips-color);
 }
 
 .flex {
@@ -50,7 +54,7 @@ H1 {
 main {
   background-color: #fff;
   border-radius: 0.25em;
-  box-shadow: 0em 0em 0.5em #1799DD;
+  box-shadow: 0em 0em 0.5em var(--tulips-color);
   flex-wrap: wrap;
   padding: 1em;
   max-width: 400px;
@@ -58,7 +62,7 @@ main {
 
 svg {
   border-radius: 0.1em;
-  border: 5px solid #191919;
+  border: 5px solid var(--stroke-color);
 }
 
 svg rect {
@@ -67,11 +71,11 @@ svg rect {
 }
 
 #svgCanvas {
-  background-color: #cae9ff;
+  background-color: var(--bg-color);
 }
 
 #svgPreview {
-  background-color: #cae9ff;
+  background-color: var(--bg-color);
 }
 
 #info {
@@ -80,6 +84,7 @@ svg rect {
 }
 
 #info>.text {
+  color: var(--text-color);
   font-weight: bold;
 }
 
@@ -95,6 +100,7 @@ svg rect {
 
 #gameOver,
 #levelUp {
+  color: var(--text-color);
   font-size: 1.5em;
   font-weight: bolder;
   text-align: center;
