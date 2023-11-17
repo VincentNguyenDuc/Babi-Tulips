@@ -1,10 +1,14 @@
 /** Constants */
+const Seed = {
+    RNG_SEED_1: 16012004,
+    RNG_SEED_2: 19082004
+} as const;
 
 const Viewport = {
     CANVAS_WIDTH: 200,
     CANVAS_HEIGHT: 400,
     PREVIEW_WIDTH: 160,
-    PREVIEW_HEIGHT: 80,
+    PREVIEW_HEIGHT: 80
 } as const;
 
 const Constants = {
@@ -54,7 +58,8 @@ type State = Readonly<{
     stats: Statistics,
     dropRate: number,
     obstacles: ReadonlyArray<Shape>,
-    levelUp: boolean
+    levelUp: boolean,
+    tulips: number
 }>;
 
 /**
@@ -140,4 +145,4 @@ export type {
     Shape, ShapeType, SingleBlock,
     Action
 }
-export { Viewport, Constants, Block, Spawn };
+export { Viewport, Constants, Block, Spawn, Seed };

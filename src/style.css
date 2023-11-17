@@ -6,6 +6,12 @@
   --bg-color: #f0e6ef;
   --stroke-color: #9c89b8;
   --text-color: #5e548e;
+  --light-green: #25af59;
+  --green: #139a3e;
+  --light-pink: #f3a69e;
+  --pink: #ff8081;
+  --yellowish: #eddec1;
+  --hair-size: 30px;
 }
 
 BODY,
@@ -104,4 +110,19 @@ svg rect {
   font-size: 1.5em;
   font-weight: bolder;
   text-align: center;
+}
+
+#svgTulipContainer {
+  background-color: var(--bg-color);
+}
+
+#loveYou {
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+#movingPath,
+#stemEnd,
+#leafLeftEnd {
+  visibility: hidden;
 }

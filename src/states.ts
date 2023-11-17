@@ -171,14 +171,16 @@ class ScoreAction implements Action {
 
         // For simplicity, earned score will equal to: 
         // the number of clear rows * the current level
-        const newScore = s.stats.score + fullRowsYCoordinates.length * s.stats.level
+        const newScore = s.stats.score + fullRowsYCoordinates.length;
+        const newTulips = s.tulips - 65 * fullRowsYCoordinates.length;
         return {
             ...s,
             stats: {
                 ...s.stats,
                 score: newScore
             },
-            fixedShapes: newFixedShapes
+            fixedShapes: newFixedShapes,
+            tulips: newTulips
         }
     }
 
@@ -375,7 +377,8 @@ const INITIAL_STATE: State = {
     },
     dropRate: Block.HEIGHT,
     obstacles: [],
-    levelUp: false
+    levelUp: false,
+    tulips: 700
 } as const;
 
 export {
